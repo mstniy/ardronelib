@@ -10,6 +10,14 @@
 #include <Maths/filter.h>
 #include <math.h>
 
+#ifndef min
+#define min(a, b) (a) < (b) ? (a) : (b)
+#endif
+
+#ifndef max
+#define max(a, b) (a) < (b) ? (b) : (a)
+#endif
+
 void filter_init(uint32_t n, float32_t *old_input, float32_t initial_input, float32_t *old_output, float32_t initial_output)
 {
   uint32_t ii;
